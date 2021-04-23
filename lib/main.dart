@@ -10,7 +10,7 @@ void main() {
           title: Center(
             child: Text('Dicee'),
           ),
-          backgroundColor: Colors.red.shade700,
+          backgroundColor: Colors.pink.shade700,
         ),
         body: DicePage(),
       ),
@@ -36,6 +36,7 @@ class _DicePageState extends State<DicePage> {
               onPressed: () {
                 setState(() {
                   leftDiceNo = Random().nextInt(6) + 1;
+                  rightDiceNo = Random().nextInt(6) + 1;
                 });
               },
               child: Image.asset('images/dice$leftDiceNo.png'),
@@ -46,6 +47,7 @@ class _DicePageState extends State<DicePage> {
             child: FlatButton(
               onPressed: () {
                 setState(() {
+                  leftDiceNo = Random().nextInt(6) + 1;
                   rightDiceNo = Random().nextInt(6) + 1;
                 });
               },
